@@ -17,7 +17,6 @@ Your project has 3 required parts: the app, a README markdown file, and a presen
 * **Have at _least_ 2 models** (more if they make sense) – And should have at _least ONE_ relationship between tables.
 * **Use Express, PG-Promise, Body Parser and Mustache-Express**,
 * **Have complete RESTful routes** for at least one of your resources with GET, POST, PUT, and DELETE
-* **Include sign up/log in functionality**, with encrypted passwords & authorization with bcrypt
 * **Your App must have MVC architecture**
 * **Include wireframes** that you designed during the planning process.  [wireframe.cc](https://wireframe.cc/) is a great place to make these.  Photoshop and illustrator are good as well.
 * Have **clean HTML and CSS**
@@ -25,6 +24,7 @@ Your project has 3 required parts: the app, a README markdown file, and a presen
 * **Use at least one NPM package** that we have not talked about in class
 
 #### Reach goals :tada::
+* **Include sign up/log in functionality**, with encrypted passwords & authorization with bcrypt
 * **Add additional models**, as is appropriate for your app.
 * **Utilize additional NPM packages**, NPM has the largest collection of libraries ever made! Try to include something we haven't covered that will be useful for your app!
 
@@ -69,7 +69,7 @@ Your project has 3 required parts: the app, a README markdown file, and a presen
 
 ## Timeline
 
-### Tuesday - Project Proposals: Due Tonight! :calendar:
+### Project Proposals: Due Tonight! :calendar:
 * **Spend the evening coming up with ideas and making plans for your app.** By the end of the night, submit your project proposal!
 * All proposals should be in the form of an issue attached to this repository.
 * __Your proposal should include:__
