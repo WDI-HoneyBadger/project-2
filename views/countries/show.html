@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Welcome to {{countries.name}}</h3>
+        <!-- <div class="container"> -->
+            <img class="image1" src="{{countries.img_url}}" alt="">
+        <!-- </div> -->
+<div class="linkto">
+<a href="/">Back to Home Page</a>
+</div>
+        <!-- list all the cities -->
+
+        <h3>Cities of the Country</h3>
+        {{#cities}}
+        <h4> {{name}}</h4>
+        <div class="row">
+            {{#imagesArr}}
+
+            <div class="col s12 m6 l6 xl6 city-image">
+                <div class="card #efebe9 brown lighten-5 ">
+                    <div class="card-image">
+                        <img src="{{.}}" alt="city">
+                    </div>
+                </div>
+            </div>
+            {{/imagesArr}}
+        </div>
+
+        <h6>Location:</h6> <p>{{location}}</p>
+        <h6>Population</h6><p>{{population}}</p>
+        <h6>History </h6><p>{{history}}</p>
+        <h6>Most Atractive Sightseeing</h6> <p>{{sightseeing}}</p>
+        <h6>Best Activities</h6><p>{{activites}}</p>
+        <h6>Facilities Available</h6><p>{{facilities}}</p>
+        <h6>Nearby Cities & Towns</h6> <p>{{cities_nearby}}</p>
+        
+
+        <!-- <ul>History {{history}}</ul>
+    <ul>Most Atractive Sightseeing:{{sightseeing}}</ul>
+    <ul>Best Activities {{activites}}</ul>
+    <ul>Facilities Available {{facilities}}</ul>
+    <ul>Nearby Cities & Towns {{cities_nearby}}</ul> -->
+
+    <div class="footer">
+            <p><div class="chip"> <a href="/city/new">Create New City</a>
+            </div>
+    
+            
+            <div class="chip">
+            <a href="/city/{{id}}/edit">Update City</a>
+        </div>
+
+        
+            
+    
+            <form action="/city/{{id}}?_method=DELETE" method="POST">
+                <div class="chip">
+                    <button >Delete City</button>
+                </div>
+            </form></p>
+          </div>
+        
+        <!-- <a href="/city/{{id}}/edit">Update City</a> -->
+        <!-- <form action="/city/{{id}}/edit" method="GET">
+            <button type="submit">Update City</button>
+        </form> -->
+
+        <form action="/countries/{{id}}" id="usrform">
+            Name:
+
+            <input type="text" name="usrname">
+            <input type="submit">
+        </form>
+        <textarea name="comment" form="usrform">Enter comment here...</textarea>
+
+        {{/cities}}
+    </div>
+
+
+    <script src="/static/main.js"></script>
+</body>
+
+</html>
