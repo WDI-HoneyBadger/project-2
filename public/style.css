@@ -1,0 +1,88 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color:#EFEBE9;
+    text-align: center;
+
+}
+img {
+    height: 100%;
+    width: 60%;
+}
+label {
+    width: 60%;
+    display: block;
+}
+h1 {
+    margin:15px auto;
+    color:#004D40;
+}
+
+.login{
+   box-align: center; 
+}
+.imagesContainer1 .col{
+    height: 500px;
+    padding: 0;
+}
+
+
+
+.fp-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image1 {
+    width: 60%;
+
+}
+
+div.city-image{
+    height: 480px;
+}
+
+.city-image div{
+    width: 100%;
+    height: 100%;
+}
+
+.city-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* ç */
+
+h6 {
+    color:#0277BD;
+    font-weight: bold;
+}
+
+h5 {
+    color:rgb(160, 71, 71)
+}
+
+a, button {
+    color:#004D40;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.login {
+margin: 20px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(39, 75, 62);
+    color: white;
+    text-align: center;
+ }
