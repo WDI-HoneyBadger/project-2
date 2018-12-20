@@ -1,0 +1,102 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link href="https://fonts.googleapis.com/css?family=Anton|Poppins|Fredoka+One" rel="stylesheet">
+          <link rel="shortcut icon" href="http://images.clipartpanda.com/muscle-clipart-cliparti1_muscle-clipart_04.jpg" type="image/x-icon">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          <title>Edit trainer</title>
+        </head>
+        <body>
+          <h1>Edit Trainer</h1>
+        
+          
+          <form action="/trainers/edit/{{trainers.id}}?_method=PUT" method="post">
+            <!-- <div class="card"></div> -->
+            <label for="name">
+                   name: <input type="text" name="name" id="name" value="{{trainers.name}}">
+            </label>
+            <label for="phone_number">
+                    Phone Number: <input type="tel" name="phone_number" id="phone_number" value="{{trainers.phone_number}}">
+            </label>
+        
+            <label for="rate">
+                    rate: <input type="text" name="rate" id="rate" value="{{trainers.rate}}">
+                  </label>
+        
+                  <label for="img">
+                        img: <input type="url" name="img" id="img" value="{{trainers.img}}">
+                      </label>
+
+                        <label for="info">
+                      <textarea name="info" cols="30" rows="10" placeholder="Write down experinces . . . ">{{trainers.info}}</textarea>
+        
+                    </label>
+            <button type="submit" class = "btn btn-outline-primary">Submit Changes</button>
+         </div> </form>
+
+         <footer class="footer1">
+
+                <div class="footerDiv">
+                    <div class="pad">
+                    <p class="fontg">This project has been done with 💖 in Misk Academy  </p>
+                
+                            <p class="fontg">Warmful thanks to Aliah, Trevor, Jackie and Ghadeer!</p>
+                        <p class="fontg">Copyright © 2018</p></div></div>
+            </footer>
+
+        </body>
+        </html>
+        
+        <style>
+
+            .fontg{
+
+font-family: 'Anton', sans-serif;
+font-family: 'Fredoka One', cursive;
+}
+.footerDiv{
+
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.footer1{
+
+    align-content: center;
+    background-color: #333;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    border-color: black;
+    background-image: transparent;
+}
+        
+            body{
+        
+                background-color: darkgray;
+            }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 30px;
+            text-align: center;
+            font-family: arial;
+            flex-wrap: wra;
+            background-color:lightgray;
+            width: 30%;
+        min-width: 300px;
+        border-radius: 15px;
+            
+           }
+        
+        </style>
+
+</body>
+</html>

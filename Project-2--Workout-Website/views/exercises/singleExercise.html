@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="http://images.clipartpanda.com/muscle-clipart-cliparti1_muscle-clipart_04.jpg" type="image/x-icon">
+    <script type="module" src="/node_modules/youtube-video-js/dist/youtube-video.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <title>Single Exercise</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle  bg-transparent" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" href="https://pngimage.net/wp-content/uploads/2018/05/dumbbell-logo-png-1.png" />
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- {{exercises.reps}}
+    {{exercises.no_sets}} -->
+
+    <div class="card">
+        {{#exercises}}
+        <h1>{{exercise_name}}</h1>
+        <img src="{{exercises.img}}" alt="{{exercises.exercise_name}}" style="width:100%">
+        <p class="sets">No. of sets: {{exercises.no_sets}}</p>
+        <p class="reps">No. of reps: {{exercises.reps}}</p>
+        <div>
+            <p class="BLOCKQUOTE"> {{exercises.describe}}</p>
+            <a href="{{exercises.video}}" class="wv">Watch a Video</a>
+        </div>
+
+        <!-- <video width="420" height="315">
+
+         <source src="" type="video/mp4"></video>
+
+                  
+    </video>  -->
+        <!-- <iframe width="966" height="543" src="{{exercises.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    -->
+
+        <!-- <p>{{describe}}</p> -->
+
+        <!-- <form action="/exer/{{id}}?_method=DELETE" method="POST">
+<button type="submit">Delete Exercise</button>
+</form> -->
+        <!-- <p><a href="/exercise/index/{{id}}"><button>See details</button></a></p> -->
+
+      
+        {{/exercises}}
+    </div>
+
+    <footer class="footer1">
+
+            <div class="footerDiv"><p class="fontg">This project has been done with 💖 in General Assembly  </p>
+            
+                        <p class="fontg">Warmful thanks to Aliah, Trevor, Jackie and Ghadeer!</p>
+                    <p class="fontg">Copyright © 2018</p></div>
+        </footer>
+</body>
+
+</html>
+
+<style>
+
+    .fontg{
+
+font-family: 'Anton', sans-serif;
+font-family: 'Fredoka One', cursive;
+}
+.footerDiv{
+
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+BLOCKQUOTE {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #444444;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
+    background: #EEEEEE;
+    padding: 5px;
+    margin: auto 15px;
+}
+
+    .parag {
+
+
+        /* display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        height: 3.3rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #999; */
+        /* margin: 0 auto; */
+        font-size: 20px;
+        font-family: 'Nunito', sans-serif;
+        vertical-align: text-bottom;
+    }
+
+
+.wv{
+
+    font-size: 25px;
+}
+    .vid{
+
+        font-size: 25px;
+        margin: 20px;
+    }
+
+    footer {
+
+        background: transparent;
+        color: white;
+    }
+
+    #container {
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    footer {
+
+        background: transparent;
+        color: white;
+        /* position: fixed; */
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: 30px;
+        text-align: center;
+        font-family: arial;
+        flex-wrap: wra;
+        background-color: lightgray;
+        width: 30%;
+        min-width: 300px;
+        border-radius: 15px;
+
+    }
+
+    .reps {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .sets {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: rgb(68, 133, 217);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+    .card button:hover {
+        /* opacity: 0.7; */
+        background-color: tomato;
+    }
+
+    .footer1{
+
+align-content: center;
+background-color: #333;
+left: 0;
+bottom: 0;
+padding: 0;
+width: 100%;
+position: static;
+border-color: black;
+/* background-image: transparent; */
+}
+
+    body {
+
+
+        background-image: url('https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg');
+        background-size: cover;
+        /* background-blend-mode: darken; */
+
+        /* background-color: aquamarine; */
+    }
+
+        .BLOCKQUOTE {
+    font-family: Verdana;
+    font-size: 11px;
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: .25px;
+}
+</style>

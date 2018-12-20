@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Online Coaching</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Poppins|Fredoka+One" rel="stylesheet"> 
+    <link rel="shortcut icon" href="http://images.clipartpanda.com/muscle-clipart-cliparti1_muscle-clipart_04.jpg" type="image/x-icon">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link href="node_modules/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
+
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+    .flex-container {
+  display: flex;
+  justify-content: center;
+} 
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+
+.tran-nav{
+
+    background-image: transparent;
+}    
+
+  }
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle  bg-transparent" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" href="https://pngimage.net/wp-content/uploads/2018/05/dumbbell-logo-png-1.png" />
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/exercise">Exercises</a></li>
+                    <li><a href="/trainers">Trainers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+   
+               
+              </div> -->
+    <div id="container">
+        {{#exercises}}
+        <div class="card flex1">
+
+            <h3>{{exercise_name}}</h3>
+            <img src="{{img}}" alt="{{exercise_name}}" style="width:100%" height="250px">
+            <p class="sets">No. of sets: {{no_sets}}</p>
+            <p class="reps">No. of reps: {{reps}}</p>
+           
+
+
+            <!-- <form action="/exer/{{id}}?_method=DELETE" method="POST">
+                                            <button type="submit">Delete Exercise</button>
+                                        </form> -->
+            <a href="/exercise/index/{{id}}"><button>See details</button></a>
+            <form action="/exercise/{{id}}?_method=DELETE" method="POST">
+                <button onclick="showMessage()" type="submit">Delete Exercise</button>
+            </form>
+            <a href="/exercise/{{id}}/edit"><button>  Edit Exercise</button></a>
+
+
+        </div>
+        {{/exercises}}
+    </div>
+
+     
+
+<footer class="footer1">
+
+    <div class="footerDiv"><p class="fontg">This project has been done with 💖 in Misk Academy  </p>
+    
+                <p class="fontg">Warmful thanks to Aliah, Trevor, Jackie and Ghadeer!</p>
+            <p class="fontg">Copyright © 2018</p></div>
+</footer>
+   
+              
+
+</body>
+
+</html>
+
+
+
+
+
+<style>
+
+.fontg{
+
+    font-family: 'Anton', sans-serif;
+    font-family: 'Fredoka One', cursive;
+}
+    .footerDiv{
+
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .footer1{
+
+        align-content: center;
+        background-color: #333;
+        left: 0;
+        bottom: 0;
+        padding: 0;
+        width: 100%;
+        position: static;
+        border-color: black;
+        /* background-image: transparent; */
+    }
+    a {
+
+        color: white;
+        text-decoration: none;
+
+    }
+
+    #container {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* footer {
+
+        background: transparent;
+        color: white;
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position:absolute;
+   height:100px; 
+    }  */
+    .footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 2px;
+        background: transparent;
+        text-align: center;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: 30px;
+        text-align: center;
+        font-family: arial;
+        flex-wrap: wra;
+        background-color: lightgray;
+        width: 30%;
+        min-width: 300px;
+        border-radius: 15px;
+
+    }
+
+    .reps {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .sets {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .card button {
+        border: none;
+    outline: 0;
+    margin: 3px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(68, 133, 217);
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 15px;
+    }
+
+    .card button:hover {
+        /* opacity: 0.7; */
+        background-color: tomato;
+    }
+
+    body {
+
+
+        background-image: url('./images/back.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        /* background-blend-mode: darken; */
+    }
+</style>
+
+<script>
+
+
+
+
+
+    function showMessage() {
+        //     swal({
+        //   title: "Good job!",
+        //   text: "You clicked the button!",
+        //   icon: "success",
+        //   button: "Aww yiss!",
+        // });
+        console.log("hye");
+
+    }
+
+
+
+
+
+</script>

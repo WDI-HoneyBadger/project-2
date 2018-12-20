@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://s.codepen.io/chriscoyier/fullembedgrid/zDGkw?type=embed&animations=run&forceRefresh=1545234612231 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - Double Line Subtitles</title>
+  
+  
+    <link rel="stylesheet" href="./normalize.min.css">
+
+  
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900);
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+  background: url(https://s.cdpn.io/3/blurry-blue.jpg);
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+.embiggen {
+  font-size: 4em;
+  text-shadow: 0 0 40px #ffbab3;
+}
+article {
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto 50px;
+}
+
+.subtitle {
+  margin: 0 0 2em 0;
+}
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  top: 0;
+  width: 600px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.amp {
+  margin: 0 0 0.25em 0;
+}
+.amp span {
+  font-size: 0.7em;
+}
+
+.copy {
+  font: 1em Georgia, Serif;
+  text-align: justify;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+}
+.copy p {
+  margin: 0 0 1em 0;
+}
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+
+  <article>
+  <h1 style="font-size: 31.8333px;">Main Title</h1>
+  <p class="subtitle fancy"><span>A fancy subtitle</span></p>
+  <div class="copy">
+    <p>Bacon ipsum dolor sit amet pancetta meatloaf eiusmod laborum commodo officia ex exercitation bacon. Sunt magna duis ex prosciutto nostrud. Tri-tip ball tip sausage spare ribs sirloin sunt officia anim magna eiusmod turducken sint velit meatball ham hock. Exercitation culpa pork chop rump, short loin meatball ut aute tenderloin.</p>
+
+    <p>Cillum pariatur ground round filet mignon capicola ad ham id doner sirloin beef ribs qui mollit pork chop. Laboris bacon officia tenderloin tempor, tongue excepteur tail occaecat meatloaf consectetur ham hock consequat ut. Frankfurter jerky enim irure salami aliqua. In pork loin meatball, ut ad in nisi turkey turducken mollit.</p>
+
+    <p>Filet mignon capicola aute short loin pork belly qui ball tip spare ribs do short ribs sint. Commodo dolore rump nostrud ball tip. Veniam in hamburger tail, sunt culpa beef ribs ham hock irure. Ut bresaola flank consectetur pastrami sirloin short ribs meatball pork officia sausage in doner pork loin sed. Pastrami duis non pork loin magna, pig quis bresaola. Esse t-bone laborum, ex turkey proident flank aliquip occaecat qui sint non eiusmod strip steak spare ribs. Anim kielbasa pork chop id ut dolore commodo prosciutto doner magna.</p>
+  </div>
+</article>
+
+<article>
+  <h1 style="font-size: 31.8333px;">
+    <span class="embiggen">Love</span>
+    <div class="fancy amp"><span>&amp;</span></div>
+    Marriage
+  </h1>
+  <div class="copy">
+    <p>Go together like a horse and carridge. Cillum pariatur ground round filet mignon capicola ad ham id doner sirloin beef ribs qui mollit pork chop. Laboris bacon officia tenderloin tempor, tongue excepteur tail occaecat meatloaf consectetur ham hock consequat ut. Frankfurter jerky enim irure salami aliqua. In pork loin meatball, ut ad in nisi turkey turducken mollit.</p>
+
+    <p>Filet mignon capicola aute short loin pork belly qui ball tip spare ribs do short ribs sint. Commodo dolore rump nostrud ball tip. Veniam in hamburger tail, sunt culpa beef ribs ham hock irure. Ut bresaola flank consectetur pastrami sirloin short ribs meatball pork officia sausage in doner pork loin sed. Pastrami duis non pork loin magna, pig quis bresaola. Esse t-bone laborum, ex turkey proident flank aliquip occaecat qui sint non eiusmod strip steak spare ribs. Anim kielbasa pork chop id ut dolore commodo prosciutto doner magna.</p>
+  </div>
+  
+</article>
+    <script src="./stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+
+  <script src="./jquery.min.js"></script>
+<script src="./jquery.fittext.js"></script>
+
+  
+
+    <script>
+      jQuery("h1").fitText(1.2);
+      //# sourceURL=pen.js
+    </script>
+
+
+
+  
+  
+
+  <script src="./css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+
+
+
+ 
+</body></html>

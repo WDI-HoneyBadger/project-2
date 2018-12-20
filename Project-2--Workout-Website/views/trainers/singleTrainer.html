@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Poppins|Fredoka+One" rel="stylesheet"> 
+    <link rel="shortcut icon" href="http://images.clipartpanda.com/muscle-clipart-cliparti1_muscle-clipart_04.jpg" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Single Trainer</title>
+</head>
+<body>
+   
+        <div class="card">
+                {{#trainers}}
+                <h1>{{name}}</h1>
+                <img src="{{img}}" alt="{{name}}" style="width:100%">
+                <p class="sets">Phone Number: {{phone_number}}</p>
+                <p class="reps">rs. of reps: {{rate}}</p>
+                <p class="reps>">Info: {{info}}</p>
+             
+                {{/trainers}}
+                </div>
+
+
+        <footer class="footer1">
+
+                <div class="footerDiv">
+                    <div class="pad">
+                    <p class="fontg">This project has been done with 💖 in Misk Academy  </p>
+                
+                            <p class="fontg">Warmful thanks to Aliah, Trevor, Jackie and Ghadeer!</p>
+                        <p class="fontg">Copyright © 2018</p></div></div>
+            </footer>
+</body>
+</html>
+
+
+<style>
+
+    .fontg{
+
+font-family: 'Anton', sans-serif;
+font-family: 'Fredoka One', cursive;
+}
+.footerDiv{
+
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.footer1{
+
+    align-content: center;
+    background-color: #333;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    border-color: black;
+    background-image: transparent;
+}
+
+
+
+      .parag {
+
+
+/* display: -webkit-box;
+-webkit-line-clamp: 6;
+-webkit-box-orient: vertical;
+height: 3.3rem;
+text-overflow: ellipsis;
+overflow: hidden;
+color: #999; */
+/* margin: 0 auto; */
+font-size: 20px;
+font-family: 'Nunito', sans-serif;
+vertical-align: text-bottom;
+}
+
+footer {
+
+background: transparent;
+color: white;
+}
+
+#container {
+align-content: center;
+display: flex;
+flex-wrap: wrap;
+margin: 0 auto;
+}
+
+footer {
+
+background: transparent;
+color: white;
+/* position: fixed; */
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+max-width: 300px;
+margin: 30px;
+text-align: center;
+font-family: arial;
+flex-wrap: wra;
+background-color: lightgray;
+width: 30%;
+min-width: 300px;
+border-radius: 15px;
+
+}
+
+.reps {
+color: grey;
+font-size: 18px;
+}
+
+.sets {
+color: grey;
+font-size: 18px;
+}
+
+.card button {
+border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color: rgb(68, 133, 217);
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+border-radius: 15px;
+}
+
+.card button:hover {
+/* opacity: 0.7; */
+background-color: tomato;
+}
+
+
+
+body {
+
+
+background-image: url('https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg');
+background-size: cover;
+
+/* background-blend-mode: darken; */
+
+/* background-color: aquamarine; */
+}
+
+</style>
