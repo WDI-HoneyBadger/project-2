@@ -1,7 +1,7 @@
 
-# Explanations of the technologies used
+### Explanations of the technologies used
 JS,HTML,CSS
-# Wireframes
+### Wireframes
 ![wireframe1](https://user-images.githubusercontent.com/44347549/50268783-29a97b80-043d-11e9-9d9f-913fbe35904d.png)
 ![wireframe2](https://user-images.githubusercontent.com/44347549/50268784-29a97b80-043d-11e9-8c9f-4e719b6c5e82.png)
 ![wireframe3](https://user-images.githubusercontent.com/44347549/50268785-29a97b80-043d-11e9-8b0b-e345f1182dee.png)
