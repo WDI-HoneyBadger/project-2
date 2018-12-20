@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Poppins|Fredoka+One" rel="stylesheet"> 
+  <link rel="shortcut icon" href="http://images.clipartpanda.com/muscle-clipart-cliparti1_muscle-clipart_04.jpg" type="image/x-icon">
+  <title>Document</title>
+</head>
+<body>
+
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle  bg-transparent" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img class="navbar-brand" href="https://pngimage.net/wp-content/uploads/2018/05/dumbbell-logo-png-1.png" />
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+        
+                            <li><a href="/">Home</a></li>
+                            <li class="active"><a href="/exercise">Exercises</a></li>
+                            <li><a href="/trainers">Trainers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+        
+                    </div>
+                </div>
+            </nav>
+
+  <h1>Edit Exercise</h1>
+
+  
+  <form action="/exercise/{{exercises.id}}?_method=PUT" method="post">
+    <!-- <div class="card"></div> -->
+    <label for="exercise_name">
+            exercise_name: <input type="text" name="exercise_name" id="exercise_name" value="{{exercises.exercise_name}}">
+    </label>
+
+    <label for="img">
+            img: <input type="url" name="img" id="img" value="{{exercises.img}}">
+          </label>
+
+    <label for="describe">
+            describe: <textarea type="text" name="describe" id="describe" cols="35" rows="10">{{exercises.describe}}</textarea>
+    </label>
+
+    <label for="reps">
+            reps: <input type="text" name="reps" id="reps" value="{{exercises.reps}}">
+          </label>
+
+          <label for="noOfSets">
+                Number of sets: <input type="text" name="noOfSets" id="noOfSets" value="{{exercises.no_sets}}">
+              </label>
+
+              <label for="video">
+
+                Video Url: <input type="url" name="video" id="video" value="{{exercises.video}}">
+
+              </label>
+
+    <button type="submit" class = "btn btn-outline-primary">submit changes</button>
+ </div> 
+</form>
+
+
+
+ <footer class="footer1">
+
+        <div class="footerDiv">
+            <div class="pad">
+            <p class="fontg">This project has been done with 💖 in Misk Academy  </p>
+        
+                    <p class="fontg">Warmful thanks to Aliah, Trevor, Jackie and Ghadeer!</p>
+                <p class="fontg">Copyright © 2018</p></div></div>
+    </footer>
+
+</body>
+</html>
+
+<style>
+
+   
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+    .flex-container {
+  display: flex;
+  justify-content: center;
+} 
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+
+.tran-nav{
+
+    background-image: transparent;
+}    
+
+  }
+
+    body{
+
+        background-color: darkgray;
+    }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 30px;
+    text-align: center;
+    font-family: arial;
+    flex-wrap: wra;
+    background-color:lightgray;
+    width: 30%;
+min-width: 300px;
+border-radius: 15px;
+    
+   }
+
+</style>
