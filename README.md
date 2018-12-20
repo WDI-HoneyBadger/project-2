@@ -4,8 +4,6 @@ Ethar - إيثار
 
 
 
-* Meaning Ethar : Act of deciding or prefering to do something in a particular way 
-
 principle of considering the welfare and happiness of others before one's own; unselfishness 
 - the quality of being selfless 
 - the quality of being unselfish
@@ -23,6 +21,10 @@ principle of considering the welfare and happiness of others before one's own; u
 * Shoutouts 
 - Grateful to the God for the good health and wellbeing that were necessary to complete this project.
 i wish to express my sicere thanks to Trever , Jackie  and Ghadeer ,for providing me with all the necessary hints.
+
+
+    
+
 
 
  i am  extremely thankful and indebted to yours for sharing expertise, and sincere and valuable guidance .
