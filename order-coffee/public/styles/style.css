@@ -1,0 +1,22 @@
+body{
+    background-size: cover;
+    
+    background-attachment: fixed;
+}
+
+h1{
+    margin: 15%
+}
+form{
+    margin: 15%
+}
+
+footer {
+
+    background: transparent;
+    color:black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
