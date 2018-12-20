@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>show</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+<body>
+  
+    <section class="gallery">
+            <div style="padding: 0px 20px; margin: 0px 5px; top: 0px; bottom: 0px; position: relative; left: -20px; box-sizing: border-box; width: 998px;">
+                <div style="display:block;">
+    
+                    <a href="/events/{{id}}">
+                    <h3 style="font-size: 22px;text-align:left;line-height:22px;letter-spacing:0px; font-weight:600;margin-bottom:20px; margin-top:0px; text-transform: uppercase;">
+                       {{title}} </h3></a>
+                </div>
+                <div>
+                    <div class=" ">
+                        <p>{{describtion}}</p>
+    
+                        <div style="display:block;">
+                            <!-- <a href="/events/join" style="font-size:14px"><span>JOIN</span></a></div> -->
+                        <div class="" style="height: 32px"><span class=""></span></div>
+                    </div>
+                    <div><img src="{{image}}"
+                            width="525" height="225"></div>
+                </div>
+            </div>
+        </section>
+
+     <p> NUMBER of JOIN  {{ volunteerCount}} </p>
+     <form method="POST" action="/events/{{id}}/join/">
+      <button type="submit" style="font-size:14px"><spn>JOIN</span></button>
+    </form>
+      <a href="/events/{{id}}/edit/" style="font-size:14px"><span>EDIT</span></a>
+      
+      <a href="/events/{{id}}/delete/" style="font-size:14px"><span>DELETE</span></a>
+
+      <form method="POST" action="/events/{{id}}/delete/">
+        <button type="submit" style="font-size:14px"><span>DELETE</span></button>
+      </form>
+    </div>
+
+</body>
+</html>
