@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="/static/styles/styles.css">
+  <title>{{user.fname}}</title>
+</head>
+<body>
+
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <!-- <a id="logo-container" href="#" class="brand-logo">Logo</a> -->
+          <ul class="right hide-on-med-and-down">
+              <!-- <li><a href="/users">Take a look at artists</a></li> -->
+              <li>  <a href="/login">Sign in</a></li>
+              <li>  <a href="/users/new">Sign up</a></li>
+              <li>  <a href="/">Home</a></li>
+              <li>  <a action="/login?_method=DELETE" method="POST">log out</a></li>
+          </ul>
+    
+          <ul id="nav-mobile" class="sidenav">
+                   <!-- <li><a href="/users">Take a look at artists</a></li> -->
+                   <li>  <a href="/">Home</a></li>
+                   <li>  <a href="/login">Sign in</a></li>
+                   <li>  <a href="/users/new">Sign up</a></li>
+                   <li>  <a action="/login?_method=DELETE" method="POST">log out</a></li>
+               </ul>
+        </div>
+      </nav>
+
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h1 class="header center grey-text text-darken-4">Welcome to {{user.fname}} page</h1>
+          </div>
+        </div>
+        <div class="parallax"><img src="../static/images/image1.png" alt="Unsplashed background img 1"></div>
+        </div>
+
+        {{#user}}
+
+        <div class ="container ">
+       <div class ="displayinline container"><a  id="download-button" class="btn-large waves-effect waves-light grey darken-4" href="/users/{{user.id}}/edit">Edit Profile</a>
+        <div class ="displayinline container"><a  id="download-button" class="btn-large waves-effect waves-light grey darken-4" href="/users/{{user.id}}/images/new">New imag</a>
+          <form action="/login?_method=DELETE" method="POST" class="displayinline container">
+            <button  id="download-button" class="btn-large waves-effect waves-light grey darken-4" type="submit">Log Out</button>
+          </form>
+        </div> 
+          <br><br><br>
+          <div class="row">
+        {{#image}}
+          
+              <div class="col s12 m6">
+                <div class="card large xlarge-card">
+                  <div class="card-image">
+                      <img src="{{image}}" alt='{{text}}' height="20%" width="30%">
+                  </div>
+                  <div class="card-content">
+                      <p>{{text}}</p>
+                  </div>
+                  <div class="card-action">
+                      <a   id="download-button" class="btn-large waves-effect waves-light grey darken-4" href="/users/{{user.id}}/images/{{id}}/edit">Edit</a> 
+                  <form class="displayinline" action="/users/{{user.id}}/images/{{id}}?_method=DELETE" method="POST">
+                    <button  id="download-button" class="btn-large waves-effect waves-light grey darken-4" type="submit">Delete image</button>
+                  </form>
+                </div>
+                </div>
+              </div>
+              {{/image}}
+            </div>
+
+          {{/user}}
+         
+          
+         
+        </div>
+       
+
+</body>
+</html>
