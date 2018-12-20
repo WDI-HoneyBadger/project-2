@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ethar events</title>
+<link href="/static/styles/styles.css" rel="stylesheet" type="text/css" />
+<script src="main.js"></script>
+</head>
+<body>
+<div class="menu-wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="/" class="active">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li> <a href="/login">LOG IN</a></li>
+      <li> <a href="/users/new">SIGN UP</a></li>
+      
+    </ul>
+  </div>
+  <div class="call">
+    <h1>Call us :<span> ( 000 ) 8888 888888</span></h1>
+  </div>
+</div>
+<!--- menu-wrapper div end -->
+<div class="clearing"></div>
+<div class="border-bottom"></div>
+<div class="logo-wrapper">
+  <div class="leftshadow"></div>
+  <div class="logo">
+    <h1>ETHAR</h1>
+  </div>
+  <div class="rightshadow"></div>
+</div>
+<div class="clearing"></div>
+<!--- banner wrapper div end -->
+
+    <div class="right-colum">
+      <div class="portfolio">
+        <div class="title">
+
+              </div>  
+              <div class="banner-content" >
+                <h1><a href="/events/new">Add event</a></h1><br>
+          </div>
+        
+        {{#events}}
+        <div class="panel marRight30">
+          <div class="content"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarAHBah23cufaMItrY4e5MrXPfxoFCSG8PUBOKvVuytXITArC" />
+            <p><span>VOLUNTEER AT&nbsp;<span style=" text-transform: uppercase; color: #576679;">{{title}}</span></span></p>
+            <p>{{describtion}}.</p>
+            <a href="/events/{{id}}">visit event</a> </div>
+        </div>
+        <div class="panel">
+          <div class="content"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8zXnyOZkakvrHaRBAKdWT3_rzCqv8aH-4cD857H0FReheDHC0" />
+            <p><span>VOLUNTEER AT&nbsp;<span style="text-transform: uppercase; color: #576679;;">{{title}}</span></span></p>
+                
+            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. </p>
+            <a href="/events/{{id}}">visit event</a> </div>
+        </div>
+        <div class="panel  marRight30">
+          <div class="content"> <img src="images/img-12.jpg" />
+            <p><span>VOLUNTEER AT&nbsp;<span style="text-transform: uppercase; color: #576679;;">{{title}}</span></span></p>
+                
+            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. </p>
+            <a href="/events/{{id}}">visit event</a> </div>
+        </div>
+        <div class="panel">
+          <div class="content"> <img src="images/img-10.jpg" />
+            <p><span>VOLUNTEER AT&nbsp;<span style="text-transform: uppercase; color: #576679;;">{{title}}</span></span></p>
+                
+            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. </p>
+            <a href="/events/{{id}}">visit event</a> </div>
+        </div>
+        {{/events}}
+   
+   
+<div class="footer-wrapper">
+  <div class="footer">
+    <p> © 2018 All Rights Reserved.<a href="http://www.ethar.com"> www.ethar.com </a> Images From: <a href="http://ethar.net">www.ethar.net</a> </p>
+  </div>
+</div>
+</body>
+</html>

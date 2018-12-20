@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+
+    
+    <h1> delete page </h1>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header" class="one">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOCmQCFqjclIYOSVa43WX4OD6nbCrZuDm4wFk_gTVoqM6iRbJT" >
+            <div class="logo">
+                <a href="/">home </a>
+                <h1><a href="/events/new">Add event</a></h1><br>
+                <!-- alt="logo" -->
+            </div>
+        </div>
+    </header>
+
+    <h1>EVENTS </h1>
+    <section class="gallery">
+        {{#events}}
+
+        <div style=" text-transform: uppercase; padding: 0px 20px; margin: 0px 5px; top: 0px; bottom: 0px; position: relative; left: -20px; box-sizing: border-box; width: 998px;">
+            <div style="display:block;">
+
+                <a href="/events/{{id}}">
+                    <h3 style="font-size: 22px;text-align:center;line-height:22px;letter-spacing:0px; font-weight:600;margin-bottom:20px; margin-top:0px; "><span>VOLUNTEER AT&nbsp;<span style="color: #00a88d;">{{title}}</span></span></h3></div>
+                     </a>
+            </div>
+            <div>
+                <div class=" ">
+                    <p> {{describtion}}</p>
+
+                    <div style="display:block;">
+                        <!-- <a href="/events/join" style="font-size:14px"><span>JOIN</span></a></div> -->
+                    <div class="" style="height: 32px"><span class=""></span></div>
+                </div>
+                <div><img src="{{image}}"
+                        width="525" height="225"></div>
+            </div>
+        </div>
+
+        {{/events}}
+    </section>
+    <footer>
+            <p>Twitter | Facebook | Instegram</p>
+            <p>Contact information: someone@gmail.com
+           
+          </footer>
+    
+</body>
+
+</html>

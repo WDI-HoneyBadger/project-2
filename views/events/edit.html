@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <div class="menu-wrapper">
+                <div class="menu">
+                  <ul>
+                    <li><a href="/" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li> <a href="/login">LOG IN</a></li>
+                    <li> <a href="/users/new">SIGN UP</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="call">
+                  <h1>Call us :<span> ( 000 ) 8888 888888</span></h1>
+                </div>
+      <div class="h">      
+    <h1>edit page</h1>
+</div> 
+    <form action="/events/{{id}}/edit?_method=PUT" method="post">
+    <label for="title">
+        title: <input type="text" name="title" id="title" value="{{title}}">
+    </label><br>
+    <label for="image">
+        image: <input type="text" name="image" id="image" value="{{image}}">
+    </label> <br>
+    <label for="describtion">
+        describtion: <input type="text" name="describtion" id="describtion" value="{{describtion}}">
+    </label><br>
+    <button type="submit">submit changes</button>
+    </form>
+
+    <div class="footer-wrapper">
+            <div class="footer">
+              <p> © 2018 All Rights Reserved.<a href="http://www.ethar.com"> www.ethar.com </a> Images From: <a href="http://ethar.net">www.ethar.net</a> </p>
+            </div>
+</body>
+</html>
